@@ -44,8 +44,6 @@
     <Compile Include="ChildA.cs" />
     <Compile Include="Container.cs" />
     <Compile Include="Extensions\CollectionExtensions.cs" />
-    <Compile Include="Extensions\EnumerableExtensions.cs" />
-    <Compile Include="Extensions\QueryableExtensions.cs" />
     <Compile Include="Extensions\TypeExtensions.cs" />
     <Compile Include="IEntityBase.cs" />
     <Compile Include="Model\Entities\BaseEntity.cs" />

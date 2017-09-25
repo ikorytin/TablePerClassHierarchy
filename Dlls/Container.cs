@@ -7,43 +7,44 @@ namespace Dlls
     {
         public Container()
         {
-            ALaCarteChildA = new HashSet<ChildA>();
-            Miscellaneous = new HashSet<ChildB>();
+            CollectionOne = new HashSet<ChildA>();
+            CollectionTwo = new HashSet<ChildB>();
         }
 
-        public virtual ICollection<ChildA> ALaCarteChildA { get; set; }
+        public virtual ICollection<ChildA> CollectionOne { get; set; }
 
-        public virtual ICollection<ChildB> Miscellaneous { get; set; }
+        public virtual ICollection<ChildB> CollectionTwo { get; set; }
+    
 
-        public virtual void AddService(ChildA item)
+    public virtual void AddService(ChildA item)
         {
-            if (!ALaCarteChildA.Contains(item))
+            if (!CollectionOne.Contains(item))
             {
-                ALaCarteChildA.Add(item);
+                CollectionOne.Add(item);
             }
         }
 
         public virtual void RemoveService(ChildA item)
         {
-            if (ALaCarteChildA.Contains(item))
+            if (CollectionOne.Contains(item))
             {
-                ALaCarteChildA.Remove(item);
+                CollectionOne.Remove(item);
             }
         }
 
         public virtual void AddMiscellaneous(ChildB item)
         {
-            if (!Miscellaneous.Contains(item))
+            if (!CollectionTwo.Contains(item))
             {
-                Miscellaneous.Add(item);
+                CollectionTwo.Add(item);
             }
         }
 
         public virtual void RemoveMiscellaneous(ChildB item)
         {
-            if (Miscellaneous.Contains(item))
+            if (CollectionTwo.Contains(item))
             {
-                Miscellaneous.Remove(item);
+                CollectionTwo.Remove(item);
             }
         }
     }
